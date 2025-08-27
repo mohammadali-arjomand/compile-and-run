@@ -12,11 +12,15 @@ compile-and-hash-cpp() {
 if [ "$ext" == "cpp" ]; then
     if [ ! "$2" == "--compile" -a -f "$filename.out" -a -f ".$path.md5sum" -a -f ".$path.md5sum" ]; then
         if [ "$(md5sum $path)" == "$(cat .$path.md5sum)" ]; then
-            if [ ! "$2" == "--quiet" ]; then
+            if [ ! "$2" == "--quiet" -a ! "$2" == "--short" ]; then
                 echo "Car did not compile your file and just ran prevous compiled file. If you want to compile file, enter:"
                 echo -e "\n\tcar $path --compile\n"
                 echo "If you wish to don't see this message, enter:"
                 echo -e "\n\tcar $path --quiet\n"
+                echo "If you want to see only a short message, enter:"
+                echo -e "\n\tcar $path --short\n"
+            elif [ "$2" == "--short" ]; then
+                echo "> No Compile"
             fi
         else
             compile-and-hash-file
