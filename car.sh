@@ -23,7 +23,7 @@ if [ "$ext" == "cpp" ]; then
                 echo "> No Compile"
             fi
         else
-            compile-and-hash-file
+            compile-and-hash-cpp
         fi
     else
         compile-and-hash-cpp
