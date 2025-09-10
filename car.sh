@@ -29,6 +29,8 @@ if [ "$ext" == "cpp" ]; then
         compile-and-hash-cpp
     fi
     time "./$filename.out"
+elif [ "$ext" == "go" ]; then
+    time go run "$path"
 elif [ "$ext" == "py" ]; then
     time python3 "$path"
 elif [ "$ext" == "sh" ]; then
