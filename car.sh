@@ -30,7 +30,11 @@ if [ "$ext" == "cpp" ]; then
     fi
     time "./$filename.out"
 elif [ "$ext" == "go" ]; then
-    time go run "$path"
+    if [ "$filename" == "main" ]; then
+        time go run .
+    else
+        time go run "$path"
+    fi
 elif [ "$ext" == "py" ]; then
     time python3 "$path"
 elif [ "$ext" == "sh" ]; then
