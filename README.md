@@ -3,6 +3,7 @@ This is a simple script that compiles and runs your code. It especially designed
 
 Currently **Car** supports these languages:
 - C++
+- Golang
 - Python
 - Bash Script
 
