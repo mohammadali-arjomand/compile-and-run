@@ -10,9 +10,9 @@ Currently **Car** supports these languages:
 ## Installation
 Run this command:
 ```bash
-wget https://raw.githubusercontent.com/mohammadali-arjomand/compile-and-run/refs/heads/main/car.sh && sudo mv ./car.sh /usr/local/bin/car
+wget https://raw.githubusercontent.com/mohammadali-arjomand/compile-and-run/refs/heads/main/car.sh && sudo mv ./car.sh /usr/local/bin/car && sudo chmod +x /usr/local/bin/car
 ```
-Then, enter your password to move script to `/usr/local/bin/`
+Then, enter your password to move script to `/usr/local/bin/` and giving it execute permission
 
 Now, add this line to `~/.vimrc`
 ```vimscript
